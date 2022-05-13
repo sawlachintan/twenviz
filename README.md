@@ -4,7 +4,8 @@
 - Choose default dark theme when it's user's first visit
 - memoize the map layer
 - memoize the calculation (summarizing) functions
-- 
+- memoize the filtering data function
+- utilize the useReducer function to manage the filter states
 
 
 # Getting Started with Create React App
