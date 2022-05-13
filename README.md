@@ -1,3 +1,12 @@
+# Things to add
+
+- Choose a default team when it's user's first visit
+- Choose default dark theme when it's user's first visit
+- memoize the map layer
+- memoize the calculation (summarizing) functions
+- 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

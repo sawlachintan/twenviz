@@ -1,0 +1,3 @@
+.MuiButton-root {
+    transition: border-width 0.45s ease-in-out;
+}
