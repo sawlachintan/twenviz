@@ -1,31 +1,50 @@
-import { Slider } from "@mui/material";
-import { useState } from "react";
+import { Slider, createTheme, ThemeProvider } from "@mui/material";
+import { FC, memo, useCallback, useContext } from "react";
+import { buttonColors } from "../assets/ButtonColors";
+import { FilterContext, ACTIONS } from "../contexts/FilterContext";
 
-type Props = {};
+export const TimeSlider: FC = memo(() => {
+    const { state, dispatch } = useContext(FilterContext);
 
-export const TimeSlider = (props: Props) => {
-    const [time, setTime] = useState<number[]>([2008, 2021]);
+    const ButtonTheme = createTheme({
+        palette: {
+            primary: {
+                main: buttonColors[state.team],
+            },
+            divider: "#eeeeee",
+        },
+        typography: {
+            button: {
+                fontWeight: 600,
+            },
+        },
+    });
 
-    const handleChange = (event: Event, newValue: number | number[]) => {
-        setTime(newValue as number[]);
-    };
+    const handleChange = useCallback(
+        (event: Event, newValue: number | number[]) => {
+            dispatch({ type: ACTIONS.YEARS, payload: newValue as number[] });
+        },
+        [dispatch]
+    );
 
     const timeChosen = (value: number) => {
         return `${value}`;
     };
 
     return (
-        <Slider
-            value={time}
-            onChange={handleChange}
-            valueLabelDisplay="auto"
-            getAriaValueText={timeChosen}
-            getAriaLabel={() => "Time Filter"}
-            defaultValue={[2008, 2021]}
-            min={2008}
-            max={2022}
-            step={1}
-            marks
-        />
+        <ThemeProvider theme={ButtonTheme}>
+            <Slider
+                value={state.years}
+                onChange={handleChange}
+                valueLabelDisplay="auto"
+                getAriaValueText={timeChosen}
+                getAriaLabel={() => "Time Filter"}
+                defaultValue={[2008, 2021]}
+                min={2008}
+                max={2022}
+                step={1}
+                marks
+            />
+        </ThemeProvider>
     );
-};
+});

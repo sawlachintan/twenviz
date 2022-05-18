@@ -3,10 +3,12 @@ import { FC } from "react";
 
 type Props = {};
 
-export const Home: FC<Props> = (props) => {
+const Home: FC<Props> = (props) => {
     return (
         <Typography color={"primary"} style={{ minHeight: "100vh" }}>
             Home
         </Typography>
     );
 };
+
+export default Home;

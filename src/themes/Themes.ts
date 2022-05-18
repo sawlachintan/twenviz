@@ -12,6 +12,10 @@ export const getDesignTokens = (mode: PaletteMode | undefined) => ({
                       main: "#ffffff",
                   },
                   divider: "#eeeeee",
+                  background: {
+                      paper: "#1f1f1f",
+                      default: "#161616",
+                  },
               }
             : {
                   primary: {
@@ -19,6 +23,11 @@ export const getDesignTokens = (mode: PaletteMode | undefined) => ({
                   },
                   secondary: {
                       main: "#1a1a1a",
+                  },
+                  divider: "#000000",
+                  background: {
+                      paper: "#efecf9",
+                      default: "#eae3ff",
                   },
               }),
     },

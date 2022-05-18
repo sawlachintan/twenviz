@@ -3,7 +3,7 @@ import { FC } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import HeartBrokenIcon from "@mui/icons-material/HeartBroken";
 
-export const Error: FC = () => {
+const Error: FC = () => {
     return (
         <Stack
             width={"100vw"}
@@ -48,3 +48,5 @@ export const Error: FC = () => {
         </Stack>
     );
 };
+
+export default Error;

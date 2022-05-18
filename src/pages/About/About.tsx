@@ -32,7 +32,7 @@ const sourcesData: sourceDataObj[] = [
     },
 ];
 
-export const About: FC = () => {
+const About: FC = () => {
     return (
         <Stack mx={{ xs: 2, md: 7.5, lg: 25 }}>
             <Typography color={"primary"} variant="h3">
@@ -129,3 +129,5 @@ export const About: FC = () => {
         </Stack>
     );
 };
+
+export default About;
