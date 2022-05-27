@@ -16,6 +16,10 @@ export const getDesignTokens = (mode: PaletteMode | undefined) => ({
                       paper: "#1f1f1f",
                       default: "#161616",
                   },
+                  text: {
+                      primary: "#eae3ff",
+                      icon: "#eae3ff",
+                  },
               }
             : {
                   primary: {
@@ -28,6 +32,10 @@ export const getDesignTokens = (mode: PaletteMode | undefined) => ({
                   background: {
                       paper: "#efecf9",
                       default: "#eae3ff",
+                  },
+                  text: {
+                      primary: "#1a1a1a",
+                      icon: "#1a1a1a",
                   },
               }),
     },

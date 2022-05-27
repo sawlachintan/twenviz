@@ -60,6 +60,7 @@ const App: FC = () => {
                             sx={{ maxWidth: "100vw" }}
                             justifyContent="center"
                             alignItems="center"
+                            spacing={2}
                         >
                             <Grid xs={12} item>
                                 {!isMobile && <Navbar />}

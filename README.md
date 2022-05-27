@@ -1,8 +1,7 @@
 # Things to add
 
 - Choose a default team when it's user's first visit
-- Choose default dark theme when it's user's first visit
-- memoize the map layer
+- react-hotkeys-hook
 - memoize the calculation (summarizing) functions
 - memoize the filtering data function
 - utilize the useReducer function to manage the filter states
